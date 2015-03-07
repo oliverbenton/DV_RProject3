@@ -6,11 +6,12 @@ Our datasets can be found at:
 'http://catalog.data.gov/dataset/international-food-security',
 'http://catalog.data.gov/dataset/annual-electricity-generation-1980-2009-dff2e',
 'http://data.un.org/Data.aspx?q=GNI+Country&d=SOWC&f=inID%3a94',
-'http://visualizing.org/sites/default/files/data_set/Marc%20Schwartz/HDR_2010_dataset.zip'.
+'http://visualizing.org/sites/default/files/data_set/Marc%20Schwartz/HDR_2010_dataset.zip',
+'http://www.facebook.com/l.php?u=http%3A%2F%2Fdata.worldbank.org%2Fabout%2Fcountry-and-lending-groups&h=0AQHX1bNI'.
   
-Since our data is listed by country, there are not thousands of rows in every data set. We asked in class if this was okay, and had it approved.
+Since our data is listed by country, there are not thousands of rows in every data set. We asked in class if this was okay and had it approved.
   
-We load the data-tables into the corresponding variables, food (for food security data), electricity (for electricity generation data), GNI (for gross national income data), HDI (for human development index data), and display a subset of each data set.
+We load the data-tables into the corresponding variables, food (for food security data), electricity (for electricity generation data), GNI (for gross national income data), HDI (for human development index data), income (for income categorical data), and display a subset of each data set.
   
 ```{r}
 source('../01 Data/Fetching_Data.R', echo=TRUE)
@@ -56,5 +57,14 @@ We then created two separate graphs for 2000 and 2008 data and joined them using
 source('../03 Visualizations/Visualization3.R', echo=TRUE)
 ```
   
-We concluded from looking at the graphs that in 2000, countries with the least Saving Rates received the most amount of food aid. In 2008, however we saw a dramatic decrease of Food Aid for ALL countries, therefore indicating that either food aid is becoming less popular or countries are quickly developing into independent nations that don't require aid anymore.
+We concluded from looking at the graphs that in 2000, countries with the least Saving Rates received the most amount of food aid. In 2008, however we saw a dramatic decrease of Food Aid for ALL countries, therefore indicating that either food aid is becoming less popular or countries are quickly developing into independent nations that do not require aid anymore.
+
+Regarding categorical data, we did not have any useful categoriclas in our previously used tables, so we found a new table assigning countries to certain income groups. Unfortunately, this dataset did not have non-categoricals, but we have already demonstrated a histogram earlier in this assignment. The process of creating the histograms would be almost identical to how we made plots of the categorical data. Since the first column in this data set has country names, the quantification of this data is useless since every country is represented once. We therefore chose to exclude it from the png file, but it still appears by itself below since we could not get rid of it by setting "echo = false"" in the source command.
+
+```{r}
+source('../03 Visualizations/Categoricals.R', echo=FALSE)
+```
   
+Here is our png-file.
+  
+![Categoricals](../categoricals.png)
