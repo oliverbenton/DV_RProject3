@@ -1,0 +1,2 @@
+g <- ggplot(GNIJ, aes(x = COUNTRY, y = VALUE)) + geom_bar(stat = "identity")
+g + ggtitle('Gross National Income') + theme(plot.title=element_text(size=20, face="bold", vjust=2)) + labs(x="Country", y="US Dollars") + theme(axis.text.x=element_text(angle=50, size=14, vjust=0.5)) + theme(axis.text.y=element_text(angle=50, size=14, vjust=0.5)) + theme(axis.title.x=element_text(color="forestgreen", vjust=0.35), axis.title.y=element_text(color="cadetblue", vjust=0.35)) + theme(panel.background=element_rect(fill='darkseagreen3'))
